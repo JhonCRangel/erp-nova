@@ -1,0 +1,151 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 0b708a6..a183fe2 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,21 +1,93 @@[m
+ # ERP Nova[m
+ [m
+[31m-ERP Nova es un proyecto Full Stack desarrollado como parte de un bootcamp práctico, con el objetivo de aprender desarrollo de software utilizando herramientas y prácticas profesionales.[m
+[32m+[m[32mERP Nova is a Full Stack Enterprise Resource Planning (ERP) application developed as part of a guided Full Stack Bootcamp. The project aims to simulate the development of a real-world enterprise application while applying modern software engineering principles, clean architecture, and industry-standard development practices.[m
+ [m
+[31m-## Objetivos[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Project Goals[m
+[32m+[m
+[32m+[m[32m- Learn Full Stack Development from the ground up.[m
+[32m+[m[32m- Build a complete enterprise-grade application.[m
+[32m+[m[32m- Apply software engineering best practices.[m
+[32m+[m[32m- Maintain a clean and well-documented Git history.[m
+[32m+[m[32m- Learn technologies commonly used in the software industry.[m
+[32m+[m[32m- Deploy the application using modern DevOps practices.[m
+ [m
+[31m-- Aprender Git y GitHub.[m
+[31m-- Desarrollar un frontend moderno.[m
+[31m-- Construir una API REST.[m
+[31m-- Trabajar con PostgreSQL.[m
+[31m-- Utilizar Docker para contenerización.[m
+[31m-- Desplegar la aplicación en la nube.[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Current Tech Stack[m
+ [m
+[31m-## Tecnologías (en construcción)[m
+[32m+[m[32m### Version 0.1.0[m
+ [m
+[32m+[m[32m- HTML5[m
+ - Git[m
+ - GitHub[m
+ [m
+ ---[m
+ [m
+[31m-**Estado del proyecto:** 🚧 En desarrollo[m
+\ No newline at end of file[m
+[32m+[m[32m## Planned Technologies[m
+[32m+[m
+[32m+[m[32m- CSS3[m
+[32m+[m[32m- JavaScript (ES6+)[m
+[32m+[m[32m- React[m
+[32m+[m[32m- Node.js[m
+[32m+[m[32m- Express[m
+[32m+[m[32m- PostgreSQL[m
+[32m+[m[32m- Docker[m
+[32m+[m[32m- Kubernetes[m
+[32m+[m[32m- GitHub Actions[m
+[32m+[m[32m- Nginx[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Project Structure[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mERP-Nova/[m
+[32m+[m[32m│[m
+[32m+[m[32m├── docs/[m
+[32m+[m[32m├── src/[m
+[32m+[m[32m│   ├── assets/[m
+[32m+[m[32m│   │   ├── css/[m
+[32m+[m[32m│   │   ├── images/[m
+[32m+[m[32m│   │   └── js/[m
+[32m+[m[32m│   ├── pages/[m
+[32m+[m[32m│   └── index.html[m
+[32m+[m[32m│[m
+[32m+[m[32m├── .gitignore[m
+[32m+[m[32m├── LICENSE[m
+[32m+[m[32m└── README.md[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Development Roadmap[m
+[32m+[m
+[32m+[m[32m- [x] Project initialization[m
+[32m+[m[32m- [x] Git & GitHub[m
+[32m+[m[32m- [x] HTML fundamentals[m
+[32m+[m[32m- [ ] CSS[m
+[32m+[m[32m- [ ] Responsive Design[m
+[32m+[m[32m- [ ] JavaScript[m
+[32m+[m[32m- [ ] React[m
+[32m+[m[32m- [ ] Backend API[m
+[32m+[m[32m- [ ] Authentication[m
+[32m+[m[32m- [ ] Database[m
+[32m+[m[32m- [ ] Docker[m
+[32m+[m[32m- [ ] Kubernetes[m
+[32m+[m[32m- [ ] CI/CD[m
+[32m+[m[32m- [ ] Cloud Deployment[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Repository[m
+[32m+[m
+[32m+[m[32mThis repository is used to document the complete development process of ERP Nova, including every sprint, architectural decision, and implementation step.[m
+[32m+[m
+[32m+[m[32mEvery major feature is introduced through incremental commits to preserve the project's evolution.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Author[m
+[32m+[m
+[32m+[m[32m**Jhon C. Rangel**[m
+\ No newline at end of file[m
+[1mdiff --git a/src/index.html b/src/index.html[m
+[1mindex e69de29..e815f72 100644[m
+[1m--- a/src/index.html[m
+[1m+++ b/src/index.html[m
+[36m@@ -0,0 +1,35 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="es">[m
+[32m+[m[32m    <head>[m
+[32m+[m[32m        <meta charset="UTF-8">[m
+[32m+[m[32m        <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m        <title>ERP Nova</title>[m
+[32m+[m[32m    </head>[m
+[32m+[m[32m    <body>[m
+[32m+[m[32m        <main>[m
+[32m+[m[32m            <form>[m
+[32m+[m[32m                <h1>ERP Nova</h1>[m
+[32m+[m[32m                <p>Inciar sesiÃ³n para continuar.</p>[m
+[32m+[m
+[32m+[m[32m                <label for="username">[m
+[32m+[m[32m                    Usuario[m
+[32m+[m[32m                </label>[m
+[32m+[m
+[32m+[m[32m                <input[m
+[32m+[m[32m                id="username"[m
+[32m+[m[32m                type="text">[m
+[32m+[m
+[32m+[m[32m                <label for="password">[m
+[32m+[m[32m                    ContraseÃ±a[m
+[32m+[m[32m                </label>[m
+[32m+[m
+[32m+[m[32m                <input[m
+[32m+[m[32m                id="password"[m
+[32m+[m[32m                type="password">[m
+[32m+[m
+[32m+[m[32m                <button type="submit">[m
+[32m+[m[32m                    Iniciar Sesion</button>[m
+[32m+[m[32m            </form>[m
+[32m+[m[32m        </main>[m
+[32m+[m[32m    </body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
