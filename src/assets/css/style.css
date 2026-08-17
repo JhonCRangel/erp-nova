@@ -1,19 +1,15 @@
+/* ==========================
+   RESET
+========================== */
 *   {
     box-sizing: border-box;
 }
 
-h1{
-    font-size: 2rem;
-    color:#1f2937;
-    text-align: center;
 
-}
 
-p {
-    color: #6b7280;
-    text-align: center;
-    margin-bottom: 1rem;
-}
+/* ==========================
+   LAYOUT
+========================== */
 
 body {
     margin: 0;
@@ -27,6 +23,16 @@ body {
     font-family: Arial, sans-serif;
 }
 
+main    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+}
+
+/* ==========================
+   FORM
+========================== */
 form {
     display: flex;
     flex-direction: column;
@@ -41,12 +47,49 @@ form {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+h1{
+    font-size: 2rem;
+    color:#1f2937;
+    text-align: center;
+
+}
+
+p {
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
 input{
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 6px;
     font-size: 16px;
 }
+
+input:focus {
+    outline: none;
+    border-color: "2563eb";
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* ==========================
+   BUTTON
+========================== */
 
 button{
     padding: 12px;
@@ -66,18 +109,5 @@ button:hover {
 
 button:active   {
     transform: scale(0.98);
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-input:focus {
-    outline: none;
-    border-color: "2563eb";
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-
 }
 
