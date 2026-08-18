@@ -8,42 +8,51 @@ const passwordError = document.getElementById("password-error");
 const loginMessage = document.getElementById("login-message");
 
 
-loginForm.addEventListener("submit",function(event){
-    event.preventDefault();
-
-    let isValid = true;
-
-    loginMessage.classList.remove("success");
-    loginMessage.textContent="";
-
-
+function validateUsername(){
+    
     const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
-
+    
     if(usernameValue === ""){
         usernameError.textContent = "El usuario es Obligatorio";
         username.classList.add("error");
-        isValid = false;
+        return false;
     } 
-    else{
-        usernameError.textContent = "";
-        username.classList.remove("error");
-        }
+    usernameError.textContent = "";
+    username.classList.remove("error");
+    return true;
+}
+
+function validatePassword(){
+    
+    const passwordValue = password.value.trim();
 
     if(passwordValue === ""){
         passwordError.textContent = "La contraseña es Obligatoria";
         password.classList.add("error");
-        isValid = false;
+        return false;
     }
-    else{
-        passwordError.textContent = "";
-        password.classList.remove("error");
-    }
+    passwordError.textContent = "";
+    password.classList.remove("error");
+    return true;
+        
+}
 
-    if(isValid){
+loginForm.addEventListener("submit",function(event){
+    event.preventDefault();
+
+    loginMessage.textContent="";
+    loginMessage.classList.remove("success");
+   
+    const   usernameValid = validateUsername();
+    const   passwordValid = validatePassword();
+
+    if(usernameValid && passwordValid){
         loginMessage.classList.add("success");
         loginMessage.textContent="Datos Validos. Procesando Inicio de Sesion...";
     }
 });
+
+
+
 
 
