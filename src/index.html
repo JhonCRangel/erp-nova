@@ -11,7 +11,7 @@
     </head>
     <body>
         <main>
-            <form>
+            <form id="login-form" novalidate>
                 <h1>ERP Nova</h1>
                 <p>Inciar sesion para continuar.</p>
 
@@ -21,6 +21,7 @@
                             type="text"
                             placeholder="Ingrese su Usuario"
                             required>
+                    <span id="username-error"></span>
                 </div>
 
                 <div class="form-group">
@@ -29,13 +30,18 @@
                             type="password"
                             placeholder="Ingrese su Contraseña"
                             required>
+                    <span id="password-error"></span>
                 </div>
                
 
                 <button type="submit">
                     Iniciar Sesion
                 </button>
+                <p id="login-message"></p>
             </form>
         </main>
+
+        <script src="assets/js/main.js"></script>
+
     </body>
 </html>
