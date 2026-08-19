@@ -8,21 +8,21 @@ const passwordError = document.getElementById("password-error");
 const loginMessage = document.getElementById("login-message");
 
 
-function validateUsername(){
+function validateField(input,errorElement){
     
-    const usernameValue = username.value.trim();
+    const value = input.value.trim();
     
-    if(usernameValue === ""){
-        usernameError.textContent = "El usuario es Obligatorio";
-        username.classList.add("error");
+    if(value === ""){
+        input.classList.add("error");
+        errorElement.textContent="Este campo es Obligatorio";
         return false;
     } 
-    usernameError.textContent = "";
-    username.classList.remove("error");
+    input.classList.remove("error");
+        errorElement.textContent="";
     return true;
 }
 
-function validatePassword(){
+/* function validatePassword(){
     
     const passwordValue = password.value.trim();
 
@@ -35,7 +35,7 @@ function validatePassword(){
     password.classList.remove("error");
     return true;
         
-}
+} */
 
 loginForm.addEventListener("submit",function(event){
     event.preventDefault();
@@ -43,8 +43,8 @@ loginForm.addEventListener("submit",function(event){
     loginMessage.textContent="";
     loginMessage.classList.remove("success");
    
-    const   usernameValid = validateUsername();
-    const   passwordValid = validatePassword();
+    const   usernameValid = validateField(username,usernameError);
+    const   passwordValid = validateField(password,passwordError);
 
     if(usernameValid && passwordValid){
         loginMessage.classList.add("success");
